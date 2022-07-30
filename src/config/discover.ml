@@ -115,7 +115,7 @@ let () =
       in
       C.Flags.write_sexp
         "cxx_flags.sexp"
-        ("-std=c++11" :: cxx_abi_flag :: (torch_flags.cflags @ cuda_flags.cflags));
+        (cxx_abi_flag :: (torch_flags.cflags @ cuda_flags.cflags));
       let torch_flags_lib =
         if Caml.( = ) cuda_flags empty_flags
         then torch_flags.libs

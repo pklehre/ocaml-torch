@@ -31,7 +31,7 @@ RL = examples/reinforcement-learning/dqn.exe \
 	dune build $@
 
 all: .FORCE
-	dune build $(ALL)
+	dune build --profile=release $(ALL)
 
 rl: .FORCE
 	dune build $(RL)
